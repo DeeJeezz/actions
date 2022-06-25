@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   web:
-    image: ${{ secrets.DOCKER_NAME }}/skypro:$GITHUB_REF_NAME-$GITHUB_RUN_ID
+    image: deejeezz/skypro:$GITHUB_REF_NAME-$GITHUB_RUN_ID
     ports:
     - "80:8080"
     restart: always
