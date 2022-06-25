@@ -43,4 +43,7 @@ jobs:
           script: |
             cd test_app
             docker login -u ${{ secrets.DOCKER_NAME }} -p ${{ secrets.DOCKER_TOKEN }}
+            export DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+            export DB_USER=${{ secrets.DB_USER }}
+            export DB_NAME=${{ secrets.DB_NAME }}
             docker-compose up -d
